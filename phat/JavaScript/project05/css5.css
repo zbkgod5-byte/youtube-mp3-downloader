@@ -1,0 +1,103 @@
+body {
+    font-family: 'Kantumruy Pro', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #eee;
+}
+
+.title-section {
+    display: flex;
+    align-items: center;
+      color: #0e6aff;
+}
+
+.icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.rem;
+}
+
+.add-btn {
+    background-color: #67df81;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    width: 90px;
+    height: 45px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* Table Design */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #eee;
+}
+
+th {
+    text-align: left;
+    padding: 12px 15px;
+    font-size: 1.1rem;
+    color: #000000;
+    font-weight: normal;
+}
+
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+    color: #000000;
+}
+
+/* ចំនួន និង សរុប អក្សរដិត */
+.bold-text {
+    /* font-weight: bold; */
+    text-align: right;
+    width: 20%;
+}
+
+th:nth-child(2), th:nth-child(3) {
+    text-align: right;
+}
+
+/* Footer Section */
+.footer-cell {
+    text-align: center;
+    background-color: #f8f9fa;
+    color: #0e6aff;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+tr:hover {
+    background-color: #f1f7ff;
+}

@@ -1,0 +1,16 @@
+.div01 {
+  text-transform: uppercase;
+  background-color: aqua;
+  display: flex;
+}
+.div1,
+.div2,
+.div3,
+.div4 {
+  padding: 10px 30px;
+}
+.div5 {
+  background-color: blue;
+  display: inline-block;
+  opacity: 0.8s;
+}

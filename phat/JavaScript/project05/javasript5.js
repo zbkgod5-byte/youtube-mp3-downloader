@@ -1,0 +1,63 @@
+const money = document.querySelector(".bold-text");
+let m1 = document.getElementById("pName1");
+let m2 = document.getElementById("pName2");
+let m3 = document.getElementById("pName3");
+let m4 = document.getElementById("pName4");
+let m5 = document.getElementById("pName5");
+let m6 = document.getElementById("pName6");
+let m7 = document.getElementById("pName7");
+let m8 = document.getElementById("pName8");
+let m9 = document.getElementById("pName9");
+let m10 = document.getElementById("pName10");
+let m11 = document.getElementById("pName11");
+let m12 = document.getElementById("pName12");
+let m13 = document.getElementById("pName13");
+
+let bt = document.getElementById("bt");
+let allamount = document.getElementById("tx");
+let allamount1 = document.getElementById("tx1");
+let allamount2 = document.getElementById("tx2");
+let allamount3 = document.getElementById("tx3");
+let allamount4 = document.getElementById("tx4");
+let allamount5 = document.getElementById("tx5");
+let allamount6 = document.getElementById("tx6");
+let allamount7 = document.getElementById("tx7");
+let allamount8 = document.getElementById("tx8");
+let allamount9 = document.getElementById("tx9");
+let allamount10 = document.getElementById("tx10");
+let allamount11 = document.getElementById("tx11");
+let allamount12 = document.getElementById("tx12");
+let allamount13 = document.getElementById("tx13");
+
+bt.addEventListener("click", () => {
+  const amount1 = Number(m1.value) * 200000;
+   const amount2 = Number(m2.value) * 100000;
+    const amount3 = Number(m3.value) * 50000;
+     const amount4 = Number(m4.value) * 30000;
+      const amount5 = Number(m5.value) * 20000;
+       const amount6 = Number(m6.value) * 15000;
+        const amount7 = Number(m7.value) * 10000;
+         const amount8 = Number(m8.value) * 5000;
+          const amount9 = Number(m9.value) * 2000;
+           const amount10 = Number(m10.value) * 1000;
+            const amount11 = Number(m11.value) * 500;
+             const amount12 = Number(m12.value) * 200;
+              const amount13 = Number(m13.value) * 100;
+         
+        allamount1.innerText  = (amount1.toLocaleString()+"៛")
+        allamount2.innerText  = (amount2.toLocaleString()+"៛")
+        allamount3.innerText  = (amount3.toLocaleString()+"៛")
+        allamount4.innerText  = (amount4.toLocaleString()+"៛")
+        allamount5.innerText  = (amount5.toLocaleString()+"៛")
+        allamount6.innerText  = (amount6.toLocaleString()+"៛")
+        allamount7.innerText  = (amount7.toLocaleString()+"៛")
+        allamount8.innerText  = (amount8.toLocaleString()+"៛")
+        allamount9.innerText  = (amount9.toLocaleString()+"៛")
+        allamount10.innerText  = (amount10.toLocaleString()+"៛")
+        allamount11.innerText  = (amount11.toLocaleString()+"៛")
+        allamount12.innerText  = (amount12.toLocaleString()+"៛")
+        allamount13.innerText  = (amount13.toLocaleString()+"៛")
+
+ amountT= amount1+amount2+amount3+amount4+amount5+amount6+amount7+amount8+amount9+amount10+amount11+amount12+amount13;
+  allamount.innerText  = (amountT.toLocaleString()+"៛")
+});

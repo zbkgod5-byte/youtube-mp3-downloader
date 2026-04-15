@@ -1,0 +1,26 @@
+.h01 {
+  color: chartreuse;
+  font-family: "Noto Sans Khmer", sans-serif;
+  font-optical-sizing: auto;
+}
+.tr01 {
+  color: #fff5f5;
+  background-color: #2c251c;
+  padding: 10px 30px;
+  border-radius: 3px;
+}
+.tr02 {
+  color: #fff5f5;
+  background-color: #12f721;
+  padding: 10px 30px;
+  border-radius: 3px;
+}
+.table01 {
+  color: #fff5f5;
+  background-color: #8b8e8c;
+  padding: 10px;
+  border-radius: 15px;
+}
+.p01 {
+  text-align: center;
+}

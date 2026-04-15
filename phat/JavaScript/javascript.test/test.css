@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Header Styles */
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.header p {
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1rem;
+}
+
+/* Converter Input Styles */
+.converter-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+input[type="text"] {
+    width: 100%;
+    max-width: 600px;
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #3b82f6;
+}
+
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Step Cards Styles */
+.steps-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.step-card {
+    flex: 1;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: left;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.step-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.step-number {
+    background-color: #2563eb;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.step-card h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.step-card p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .steps-grid {
+        flex-direction: column;
+    }
+    
+    .header h1 {
+        font-size: 1.8rem;
+    }
+}

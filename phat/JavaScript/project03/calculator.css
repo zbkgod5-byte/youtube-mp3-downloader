@@ -1,0 +1,74 @@
+
+    /* រចនាប័ទ្មមូលដ្ឋានសម្រាប់ទំព័រ */
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f4f4f4;
+        font-family: Arial, sans-serif;
+        margin: 0;
+    }
+
+    /* រចនាប័ទ្មសម្រាប់តួគិតលេខ */
+    .calculator {
+        background-color: #37474F; /* ពណ៌ប្រផេះចាស់របស់តួ */
+        width: 320px;
+        padding: 25px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    /* រចនាប័ទ្មសម្រាប់អេក្រង់បង្ហាញ */
+    .calculator-screen {
+        background-color: #ECEFF1; /* ពណ៌ខៀវស្រាលរបស់អេក្រង់ */
+        width: 100%;
+        height: 80px;
+        border: none;
+        border-radius: 10px;
+        color: #000;
+        font-size: 3rem;
+        text-align: right;
+        padding: 10px 15px;
+        box-sizing: border-box;
+        margin-bottom: 25px;
+    }
+
+    /* រចនាប័ទ្មសម្រាប់ប៊ូតុង */
+    .calculator-keys {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 15px;
+    }
+
+    /* រចនាប័ទ្មសម្រាប់ប៊ូតុងធម្មតា */
+    .calculator-keys button {
+        height: 70px;
+        background-color: #fff;
+        border: none;
+        border-radius: 10px;
+        font-size: 1.8rem;
+        color: #000;
+        cursor: pointer;
+        transition: background-color 0.2s ease, transform 0.1s ease;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    /* ឥទ្ធិពលនៅពេលចុចប៊ូតុង */
+    .calculator-keys button:active {
+        transform: scale(0.95);
+        background-color: #f1f1f1;
+    }
+
+    /* រចនាប័ទ្មសម្រាប់ប៊ូតុងប្រមាណវិធី (÷, x, -, +) */
+    .operator1 {
+        color: #000;
+    }
+
+    /* រចនាប័ទ្មសម្រាប់ប៊ូតុងសញ្ញាស្មើ (=) */
+    .equal-sign {
+        background-color: #FF8A2E !important; /* ពណ៌ទឹកក្រូច */
+        color: #fff !important;
+        grid-column-start: 4;
+        grid-row-start: 4;
+    }

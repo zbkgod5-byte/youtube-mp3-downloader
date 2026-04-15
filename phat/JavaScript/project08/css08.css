@@ -1,0 +1,102 @@
+:root {
+  --bg-color: #e9eeeb;
+  --text-main: #333;
+  --text-faded: #b0b0b0;
+  --shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* .container {
+  text-align: center;
+  width: 350px;
+} */
+
+.btn-result {
+  background: #7a7a7a;
+  color: white;
+  flex: 1.5;
+  font-size: 18px;
+}
+
+.picker {
+  width: 120px;
+  height: 250px;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  border-radius: 30px;
+  background: white;
+  text-align: center;
+  padding: 20px 0;
+  margin: 20px;
+}
+.picker::-webkit-scrollbar {
+  display: none;
+}
+
+.item {
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  color: #000000;
+  scroll-snap-align: center;
+  transition: 0.1s;
+}
+.itemMonth {
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  color: #d80000;
+  scroll-snap-align: center;
+  transition: 0.1s;
+}
+.itemYear {
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  color: #d80000;
+  scroll-snap-align: center;
+  transition: 0.1s;
+  /* margin: 10px 20px; */
+  /* margin-bottom: 10px; */
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column; /* ប្តូរពីជួរដេក មកជាជួរឈរ */
+  gap: 15px;
+  width: 100%;           /* កំណត់ប្រវែងតាមតម្រូវការ */
+  max-width: 300px;      /* ឧទាហរណ៍៖ កំណត់ទំហំឱ្យល្មមមើល */
+  margin: 0 auto;        /* ដាក់ឱ្យនៅកណ្តាលអេក្រង់ */
+}
+
+button {
+  border: none;
+  padding: 18px 25px;
+  border-radius: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;           /* ឱ្យប៊ូតុងមានប្រវែងស្មើគ្នា */
+}
+
+.btn-start {
+  background: white;
+  color: black;
+  display: flex;
+  justify-content: center; /* ឱ្យអក្សរនៅកណ្តាលប៊ូតុង */
+}
+
+.btn-result {
+  background: #7a7a7a;
+  color: white;
+  font-size: 18px;
+}

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Weather Widget — Pure Template</title>
+    <link rel="stylesheet" href="css07.css" />
+  </head>
+  <body>
+    <div class="weather-card">
+      <div class="weather-inner">
+        <!-- CITY NAME + DATE (Monday 00/00/2016 style) -->
+        <div class="top-row">
+            
+          <div class="city-name" id="cityName">ខេត្ត​បាត់ដំបង</div>
+          <div class="date-block">
+            
+            <div class="day-name">
+             <h5>ថ្ងៃ </h5>
+           <h5 id="dayName"> </h5>   
+            </div>
+            
+            <div class="date-number"><h4 id="dateNumber"></h4></div>
+          </div>
+        </div>
+
+        <!-- TEMPERATURE DUO: 18° and 12° exactly like reference -->
+        <div class="temp-duo">
+          <div class="temp-primary">
+            <h2 id="temperature">18</h2>
+          </div>
+          <div class="temp-secondary"><span>C°</span></div>
+        </div>
+
+        <!-- CONDITION ROW: icon + PARTLY CLOUDY + extra 22° (exactly as image) -->
+        <div class="condition-row">
+          <div class="weather-status">
+            <div class="weather-icon" id="weatherIcon">⛅</div>
+            <div class="condition-text" id="conditionText">មិនមានទិន្នន័យ</div>
+          </div>
+          <div class="extra-degrees" id="moment"></div>
+        </div>
+
+        <!-- WIND + HUMIDITY : Wind  6km/h    30%   (matching layout) -->
+        <div class="metrics-row">
+          <div class="metric">
+            <span class="metric-label">ល្បឿនខ្យល់</span>
+            <span class="metric-value" id="windValue">km/h</span>
+            <span class="metric-label">km/h</span>
+          </div>
+          <span class="separator-dot"></span>
+          <div class="metric">
+            <span class="metric-label">ទិសដៅខ្យល់</span>
+            <span class="metric-value" id="humidityValue">156</span>
+            <span class="op">°</span>
+          </div>
+        </div>
+
+        <!-- FOOTER: extra day reference and optional subtle note like "partly cloudy" re-stated -->
+        <div class="footer-note">
+          <div class="weekday-footer" id="footerDay">ថ្ងៃ បន្ទាប់</div>
+          <div class="extra-desc" id="extraDesc">⛅  phen sophat</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="javascript07.js"></script>
+  </body>
+</html>

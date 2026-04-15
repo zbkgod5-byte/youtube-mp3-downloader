@@ -1,0 +1,52 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.game-container {
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 10px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.cell {
+ width: 100px;
+    height: 100px;
+    background-color: #89c4d1; /* ពណ៌ខៀវដូចក្នុងរូបភាព */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.cell:hover {
+    transform: scale(1.05);
+}
+.reset-btn {
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.red { background-color: #a80707 !important; }    /* សម្រាប់ X */
+.yellow { background-color: #ffd500 !important; }

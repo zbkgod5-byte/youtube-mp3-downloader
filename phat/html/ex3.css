@@ -1,0 +1,178 @@
+.table1 {
+  width: 100%;
+  border-radius: 1pc;
+  background-color: rgb(121, 138, 138);
+}
+
+.home {
+  border-radius: 1pc;
+  background-color: rgb(121, 138, 138);
+
+  width: 25px;
+}
+.table2 {
+  display: block; /* បម្លែងអោយជា block */
+  height: 200px;
+  width: 100%;
+  background: url(4876feca-3679-4b90-9625-cd69d3d6b057.__CR247,0,970,600_PT0_SX970_V1___.jpg);
+}
+.h11 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+.h12 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+}
+
+.td10 {
+  padding: 20px;
+  margin: 20px;
+  background: #dddddd;
+  border-radius: 100px 100px;
+  width: 7%;
+}
+.td2 {
+  padding: 20px;
+  margin: 20px;
+  background: #cbcbcb;
+  border-radius: 100px 100px;
+  width: 7%;
+}
+.td3 {
+  padding: 20px;
+  margin: 20px;
+  background: #a6a6a6;
+  border-radius: 100px 100px;
+  width: 7%;
+}
+.td4 {
+  padding: 20px;
+  margin: 20px;
+  background: #818181;
+  border-radius: 100px 100px;
+  width: 7%;
+}
+.div2 {
+  display: grid;
+  place-items: center;
+  height: 200px;
+}
+.card {
+  width: 500px;
+
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card-header1 {
+  background: #837d7d;
+  display: grid;
+  color: white;
+  font-weight: bold;
+  padding: 15px 0;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.card-header2 {
+  background: rgb(85, 83, 83);
+  color: white;
+  font-weight: bold;
+  padding: 15px 0;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.card-header3 {
+  background: rgb(46, 44, 44);
+  color: white;
+  font-weight: bold;
+  padding: 15px 0;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.card-body p {
+  margin: 0;
+  padding: 12px 0;
+  border-bottom: 1px solid #0b0b0b;
+  color: #000000;
+}
+
+.card-body h2 {
+  margin: 20px 0 5px;
+  font-size: 28px;
+}
+
+.card-body span {
+  margin: 0;
+  padding: 12px 0;
+  border-bottom: 1px solid #0b0b0b;
+  color: #000000;
+}
+.card-footer button {
+  padding: 8px 20px;
+  background: white;
+  border: 1px solid #333;
+  cursor: pointer;
+  transition: all 1s ease-out;
+}
+.card-footer button:hover {
+  background: rgb(0, 0, 0);
+  color: rgb(207, 45, 45);
+}
+.card-footer {
+  padding: 15px;
+  border-top: 1px solid #000000;
+}
+
+.f1 {
+  padding: 0;
+  display: grid;
+  place-items: center;
+  height: 200px;
+}
+.hr {
+  margin: -1cm;
+  padding: 0;
+  border-top: 5px solid #000000;
+  width: 5cm;
+}
+.pu {
+  width: 100%;
+  text-align: center;
+}
+.rr1,
+.rr2,
+.rr3 {
+  width: 100%;
+}
+.bbt {
+  display: inline-block;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 18px; /* អក្សរធំ */
+  padding: 10px 100px; /* ខ្នាខ្នាត button */
+  border-radius: 12px; /* បង្រួមមុខ */
+  border: 0; /* លុបខ្សែក្រៅដើម */
+  cursor: pointer;
+}
+.yy,
+.yt {
+  display: flex;
+  justify-content: center; /* ចំកណ្ដាលផ្ដេក */
+  align-items: center;
+}
+.hhh {
+  background: rgb(192, 184, 184);
+  width: 210px;
+  font-weight: bold;
+
+  font-size: 20px;
+  margin-top: 10px;
+}

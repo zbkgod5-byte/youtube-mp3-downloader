@@ -1,0 +1,69 @@
+.monoton-regular {
+  font-family: "Monoton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+    
+body {
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* font-family: Arial, sans-serif; */
+}
+
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.clock-card {
+  /* font-family: "Google Sans", sans-serif; */
+  background-color: #dbdada;
+  width: 220px;
+  padding: 20px;
+  border-radius: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.period {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: -10px;
+}
+
+.time {
+  font-size: 65px;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+
+.location-badge {
+  background-color: #f0f0f0;
+  padding: 8px 18px;
+  border-radius: 20px;
+  margin-top: 5px;
+  display: flex;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.city {
+  font-weight: bold;
+}
+
+.country {
+  color: #b0b0b0;
+}
+
+/* បន្ថែមពណ៌សម្រាប់កាតទី២ ឱ្យរាងក្រមៅបន្តិចតាមរូបភាព */
+.dark-badge .location-badge {
+  background-color: #d8d8d8;
+}

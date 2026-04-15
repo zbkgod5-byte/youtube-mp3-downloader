@@ -1,0 +1,16 @@
+.div01 {
+  width: 200px;
+  height: 100px;
+  background: #2196f3;
+  border-radius: 30px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.h01 {
+  color: aqua;
+}
+.td01 {
+  width: 20px;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student CRUD System</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Student CRUD System</h2>
+    
+    <div class="form-group">
+        <input type="text" placeholder="Name" id="name">
+        <input type="number" placeholder="Age" id="age">
+        <input type="text" placeholder="Major" id="major">
+        <input type="number" placeholder="Score" id="score">
+        <button class="btn-save">Save</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Major</th>
+                <th>Score</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td id="name1">chan dara</td>
+                <td id="age1">20</td>
+                <td id="major1">IT</td>
+                <td id="Score1">10</td>
+                <td>
+                    <button class="btn-edit">Edit</button>
+                    <button class="btn-delete">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<script src="ork.js"></script>
+</body>
+</html>
