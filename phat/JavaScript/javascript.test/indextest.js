@@ -165,11 +165,11 @@ function processMyUrl(youtubeUrl) {
     console.log("កំពុងផ្ញើទៅកាន់ Server ដើម្បីបំលែង...");
 
     // ប្រើ fetch ដើម្បីបញ្ជូន URL ទៅកាន់ Node.js Server
-    fetch('http://localhost:3000/download', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ url: youtubeUrl })
-    })
+    fetch('https://youtube-mp3-downloader-62vh.onrender.com/download', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ url: youtubeUrl })
+})
     .then(response => response.json())
     .then(data => {
         if (data.success) {
