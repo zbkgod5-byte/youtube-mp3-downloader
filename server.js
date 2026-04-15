@@ -50,4 +50,9 @@ app.get('/get-file', (req, res) => {
     }
 });
 
-app.listen(3000, () => console.log('🚀 Server រត់លើ http://localhost:3000'));
+// កូដដែលត្រឹមត្រូវសម្រាប់ Cloud
+const PORT = process.env.PORT || 3000; 
+
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`🚀 Server is running on port ${PORT}`);
+});
