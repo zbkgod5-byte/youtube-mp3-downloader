@@ -7,6 +7,12 @@ const fs = require('fs'); // បន្ថែម fs ដើម្បីគ្រ�
 const app = express();
 app.use(express.json());
 app.use(cors());
+// បន្ថែមនៅខាងក្រោម app.use(cors());
+app.use(express.static(path.join(__dirname, 'phat/JavaScript/javascript.test')));
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'phat/JavaScript/javascript.test', 'test.html'));
+});
 
 // --- ១. Route សម្រាប់បញ្ជាឱ្យទាញយកពី YouTube មកទុកក្នុង Server ---
 app.post('/download', async (req, res) => {
