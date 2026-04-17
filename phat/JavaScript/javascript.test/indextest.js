@@ -177,11 +177,11 @@ function processMyUrl(youtubeUrl) {
             
             // ៣. បង្កើត Link សម្រាប់ទាញយក File ពី Server មកកាន់ Device របស់យើង
             // យើងប្រើឈ្មោះ File (fileName) ដែល Server បានផ្ញើមកឱ្យ
-            const downloadUrl = `http://localhost:3000/get-file?name=${data.fileName}`;
-            
-            // ប្រើ window.location.href ដើម្បីឱ្យ Browser ចាប់ផ្ដើម Download ស្វ័យប្រវត្តិ
-            window.location.href = downloadUrl;
+         // ៣. បង្កើត Link សម្រាប់ទាញយក File ពី Cloud Server មកកាន់ Device របស់យើង
+const downloadUrl = `https://youtube-mp3-downloader-62vh.onrender.com/get-file?name=${data.fileName}`;
 
+// ប្រើ window.location.href ដើម្បីឱ្យ Browser ចាប់ផ្ដើម Download ស្វ័យប្រវត្តិ
+window.location.href = downloadUrl;
             alert("✅ ការបំលែងជោគជ័យ! File កំពុងត្រូវបានទាញយកមកកាន់ម៉ាស៊ីនរបស់អ្នក។");
         } else {
             alert("❌ បរាជ័យ: " + data.error);

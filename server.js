@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, 'phat/JavaScript/javascript.test')));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'phat/JavaScript/javascript.test', 'test.html'));
+    res.sendFile(path.join(__dirname, 'phat/JavaScript/javascript.test', 'index.html'));
 });
 
 // --- ១. Route សម្រាប់បញ្ជាឱ្យទាញយកពី YouTube មកទុកក្នុង Server ---
