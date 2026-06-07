@@ -1,0 +1,391 @@
+/* --- Google Font Setup --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #334155;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- SIDEBAR STYLE --- */
+.sidebar {
+    width: 240px;
+    background-color: #04785746;
+    border-right: 1px solid #e2e8f0;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.logo-area h2 {
+    color: #047857;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    text-decoration: none;
+    color: #475569;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.menu-item:hover {
+    background-color: #f1f5f9;
+}
+
+.menu-item.active {
+    background-color: #047857;
+    color: #ffffffc5;
+}
+
+/* --- MAIN CONTENT STYLE --- */
+.main-content {
+    flex: 1;
+    padding: 24px;
+    background-color: #f8fafc;
+}
+
+/* Top Navbar */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    position: absolute;
+    left: 14px;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 8px 16px 8px 38px;
+    border: 1px solid #cbd5e1;
+    border-radius: 20px;
+    background-color: #f1f5f9;
+    font-size: 13px;
+    outline: none;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    color: #64748b;
+    font-size: 16px;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Dashboard Header Area */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.title-text h1 {
+    font-size: 24px;
+    color: #0f172a;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.title-text p {
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* Total Majors Card Badge */
+.total-majors-card {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.total-majors-card .tm-icon {
+    color: #047857;
+    font-size: 22px;
+}
+
+.tm-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.tm-label {
+    font-size: 10px;
+    font-weight: 600;
+    color: #64748b;
+    letter-spacing: 0.5px;
+}
+
+.tm-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+/* --- TWO COLUMNS LAYOUT --- */
+.major-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+/* LEFT COLUMN: FORM CONTAINER */
+.form-container {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.form-title {
+    font-size: 16px;
+    color: #047857;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.input-group label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #475569;
+}
+
+.input-group input, .input-group textarea, .input-group select {
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #334155;
+    outline: none;
+    width: 100%;
+    background-color: #fff;
+}
+
+.input-group textarea {
+    resize: none;
+}
+
+.input-group input::placeholder, .input-group textarea::placeholder {
+    color: #94a3b8;
+}
+
+/* Select option styling */
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 14px;
+    padding-right: 36px;
+}
+
+.form-row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.btn-submit {
+    background-color: #047857;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 11px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 6px;
+    transition: background 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #065f46;
+}
+
+/* RIGHT COLUMN: TABLE CONTAINER */
+.table-container {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding-top: 16px;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 16px 20px;
+}
+
+.table-header h3 {
+    font-size: 15px;
+    color: #0f172a;
+    font-weight: 600;
+}
+
+.table-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.icon-btn {
+    border: 1px solid #e2e8f0;
+    background: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    color: #64748b;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #eff6ff;
+    text-align: left;
+    padding: 12px 20px;
+    font-size: 11px;
+    color: #475569;
+    font-weight: 500;
+}
+
+td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 13px;
+    color: #334155;
+}
+
+.major-name {
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.faculty-name {
+    color: #64748b;
+}
+
+/* Actions Column (Edit / Delete) */
+.actions-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.actions-cell button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.edit-btn { color: #047857; }
+.delete-btn { color: #dc2626; }
+
+/* Pagination Section */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    font-size: 12px;
+    color: #64748b;
+}
+
+.page-buttons {
+    display: flex;
+    gap: 4px;
+}
+
+.page-buttons button {
+    border: 1px solid #e2e8f0;
+    background: white;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.arrow-btn {
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #94a3b8;
+}
+
+.page-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #334155;
+}
+
+.page-num.active {
+    background-color: #047857;
+    color: white;
+    border-color: #047857;
+}

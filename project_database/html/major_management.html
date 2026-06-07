@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduAdmin System - Major Management</title>
+    <link rel="stylesheet" href="../css/major_management.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <aside class="sidebar">
+        <div class="logo-area">
+          <h2>EduAdmin System</h2>
+        </div>
+        <nav class="menu">
+          <a href="User_Management.html" class="menu-item"
+            ><i class="fa-solid fa-users"></i> User Management</a
+          >
+          <a href="student_profiles.html" class="menu-item"
+            ><i class="fa-solid fa-graduation-cap"></i> Student Profiles</a
+          >
+          <a href="faculty-setup.html" class="menu-item"
+            ><i class="fa-solid fa-chalkboard-user"></i> Faculty Setup</a
+          >
+          <a href="major_management.html" class="menu-item active"
+            ><i class="fa-solid fa-network-wired"></i> Major Management</a
+          >
+          <a href="../html/Gpa_Registry.html" class="menu-item"
+            ><i class="fa-solid fa-user-check"></i> Gpa Registry</a
+          >
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <header class="top-nav">
+          <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" placeholder="Search majors..." />
+          </div>
+          <div class="user-profile">
+            <i class="fa-regular fa-bell"></i>
+            <i class="fa-solid fa-gear"></i>
+            <img
+              src="../logo_Icon/OIP.webp"
+              alt="Profile"
+              class="avatar"
+            />
+          </div>
+        </header>
+
+        <div class="dashboard-header">
+          <div class="title-text">
+            <h1>Major Management</h1>
+            <p>
+              Configure and maintain academic programs and department
+              associations.
+            </p>
+          </div>
+          <div class="total-majors-card">
+            <div class="tm-icon"><i class="fa-solid fa-user-graduate"></i></div>
+            <div class="tm-info">
+              <span class="tm-label">TOTAL MAJORS</span>
+              <h2 class="tm-value">00</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="major-grid">
+          <div class="form-container">
+            <h3 class="form-title">Add New Major</h3>
+            <form onsubmit="event.preventDefault()">
+              <div class="input-group">
+                <label>Major Name</label>
+                <input
+                  type="text"
+                  placeholder="e.g. Computer Science & Engineering"
+                />
+              </div>
+              <div class="input-group">
+                <label for="faculty-select">Faculty Association</label>
+                <div class="select-wrapper">
+                  <select id="faculty-select" title="Faculty Association">
+                    <option>Select Faculty</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row-2">
+                <div class="input-group">
+                  <label>Total Credits</label>
+                  <input type="number" placeholder="120" value="120" />
+                </div>
+                <div class="input-group">
+                  <label>Duration (Years)</label>
+                  <input type="number" placeholder="4" value="4" />
+                </div>
+              </div>
+              <div class="input-group">
+                <label>Description</label>
+                <textarea
+                  rows="4"
+                  placeholder="Brief overview of program objectives..."
+                ></textarea>
+              </div>
+              <button type="submit" class="btn-submit">
+                Register Academic Major
+              </button>
+            </form>
+          </div>
+
+          <div class="table-container">
+            <div class="table-header">
+              <h3>Active Academic Majors</h3>
+              <div class="table-actions">
+                <button type="button" class="icon-btn" title="Filter majors">
+                  <i class="fa-solid fa-sliders" aria-hidden="true"></i>
+                </button>
+                <button type="button" class="icon-btn" title="Download majors list">
+                  <i class="fa-solid fa-download" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Major Name</th>
+                  <th>Faculty</th>
+                  <th>Credits</th>
+                  <th>Duration</th>
+                  <th class="actions-cell">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="major-name">Computer Science</td>
+                  <td class="faculty-name">Faculty of Engineering</td>
+                  <td>128</td>
+                  <td>4 Years</td>
+                  <td class="actions-cell">
+                    <button type="button" class="edit-btn" title="Edit major" aria-label="Edit major">
+                      <i class="fa-solid fa-pencil" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="delete-btn" title="Delete major" aria-label="Delete major">
+                      <i class="fa-regular fa-trash-can" aria-hidden="true"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="major-name">Mechanical Engineering</td>
+                  <td class="faculty-name">Faculty of Engineering</td>
+                  <td>132</td>
+                  <td>4 Years</td>
+                  <td class="actions-cell">
+                    <button type="button" class="edit-btn" title="Edit major" aria-label="Edit major">
+                      <i class="fa-solid fa-pencil" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="delete-btn" title="Delete major" aria-label="Delete major">
+                      <i class="fa-regular fa-trash-can" aria-hidden="true"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="major-name">Data Analytics</td>
+                  <td class="faculty-name">Faculty of Information Tech</td>
+                  <td>120</td>
+                  <td>3 Years</td>
+                  <td class="actions-cell">
+                    <button type="button" class="edit-btn" title="Edit major" aria-label="Edit major">
+                      <i class="fa-solid fa-pencil" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="delete-btn" title="Delete major" aria-label="Delete major">
+                      <i class="fa-regular fa-trash-can" aria-hidden="true"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="major-name">Business Management</td>
+                  <td class="faculty-name">Faculty of Social Sciences</td>
+                  <td>120</td>
+                  <td>3 Years</td>
+                  <td class="actions-cell">
+                    <button type="button" class="edit-btn" title="Edit major" aria-label="Edit major">
+                      <i class="fa-solid fa-pencil" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="delete-btn" title="Delete major" aria-label="Delete major">
+                      <i class="fa-regular fa-trash-can" aria-hidden="true"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="major-name">Digital Arts & Media</td>
+                  <td class="faculty-name">Faculty of Humanities</td>
+                  <td>120</td>
+                  <td>4 Years</td>
+                  <td class="actions-cell">
+                    <button type="button" class="edit-btn" title="Edit major" aria-label="Edit major">
+                      <i class="fa-solid fa-pencil" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="delete-btn" title="Delete major" aria-label="Delete major">
+                      <i class="fa-regular fa-trash-can" aria-hidden="true"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="major-name">Applied Physics</td>
+                  <td class="faculty-name">Faculty of Natural Sciences</td>
+                  <td>130</td>
+                  <td>4 Years</td>
+                  <td class="actions-cell">
+                    <button class="edit-btn" title="Edit major" aria-label="Edit major">
+                      <i class="fa-solid fa-pencil" aria-hidden="true"></i>
+                      <span class="visually-hidden">Edit major</span>
+                    </button>
+                    <button class="delete-btn" title="Delete major" aria-label="Delete major">
+                      <i class="fa-regular fa-trash-can" aria-hidden="true"></i>
+                      <span class="visually-hidden">Delete major</span>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- <div class="pagination">
+              <span>Showing 6 of 24 majors</span>
+              <div class="page-buttons">
+                <button class="arrow-btn">&lt;</button>
+                <button class="page-num active">1</button>
+                <button class="page-num">2</button>
+                <button class="page-num">3</button>
+                <button class="arrow-btn">&gt;</button>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script src="../javaScript/major_management.js"></script>
+</html>

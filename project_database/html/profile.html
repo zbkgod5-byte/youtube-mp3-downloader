@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University SRS - Student Profile</title>
+    <link rel="stylesheet" href="../css/profile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <h2>University SRS</h2>
+          <p>Academic Year 2026</p>
+        </div>
+
+        <nav class="sidebar-menu">
+          <ul>
+            <li>
+              <a href="dashboard.html"
+                ><i class="fa-solid fa-table-columns"></i> Overview</a
+              >
+            </li>
+            <li class="active">
+              <a href="profile.html"
+                ><i class="fa-regular fa-user"></i> Profile</a
+              >
+            </li>
+            <li>
+              <a href="faculty-major.html"
+                ><i class="fa-solid fa-graduation-cap"></i> Faculty & Major</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+          <a href="#"><i class="fa-regular fa-circle-question"></i> Support</a>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <div class="content-body">
+          <div class="profile-header-card">
+            <div class="avatar-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150&auto=format&fit=crop&q=80"
+                alt="Alex Johnson"
+                class="profile-avatar"
+              />
+              <button class="btn-edit-avatar" title="Edit Avatar">
+                <i class="fa-solid fa-pen"></i>
+              </button>
+            </div>
+            <div class="profile-title">
+              <h1>Alex Johnson</h1>
+              <p class="student-id">ID: 2024-88392</p>
+              <span class="badge-verified">
+                <i class="fa-solid fa-circle-check"></i> Verified Student
+              </span>
+            </div>
+          </div>
+
+          <div class="profile-grid">
+            <div class="info-card">
+              <div class="card-header">
+                <h3><i class="fa-regular fa-user"></i> Personal Information</h3>
+              </div>
+              <div class="card-body">
+                <div class="info-group-row">
+                  <div class="info-item">
+                    <span class="info-label">GENDER</span>
+                    <span class="info-value">Male</span>
+                  </div>
+                  <div class="info-item">
+                    <span class="info-label">DATE OF BIRTH</span>
+                    <span class="info-value">May 15, 2002</span>
+                  </div>
+                </div>
+                <div class="info-group-row">
+                  <div class="info-item">
+                    <span class="info-label">PHONE NUMBER</span>
+                    <span class="info-value">+1 555-0123</span>
+                  </div>
+                  <div class="info-item">
+                    <span class="info-label">EMAIL ADDRESS</span>
+                    <span class="info-value email-text"
+                      >alex.j@university.edu</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="card-header">
+                <h3>
+                  <i class="fa-solid fa-graduation-cap"></i> Academic Details
+                </h3>
+              </div>
+              <div class="card-body">
+                <div class="info-group-row">
+                  <div class="info-item">
+                    <span class="info-label">FACULTY</span>
+                    <span class="info-value">Faculty of Engineering</span>
+                  </div>
+                  <div class="info-item">
+                    <span class="info-label">MAJOR</span>
+                    <span class="info-value">Software Engineering</span>
+                  </div>
+                </div>
+                <div class="info-group-row">
+                  <div class="info-item">
+                    <span class="info-label">ACADEMIC YEAR</span>
+                    <span class="info-value">2024/25</span>
+                  </div>
+                  <div class="info-item"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="settings-bar">
+            <div class="settings-title">
+              <div class="settings-icon">
+                <i class="fa-solid fa-user-gear"></i>
+              </div>
+              <div class="settings-text">
+                <h3>Account Settings</h3>
+                <p>Manage your profile visibility and security preferences.</p>
+              </div>
+            </div>
+            <div class="settings-actions">
+              <button class="btn btn-outline">
+                <i class="fa-solid fa-lock"></i> Change Password
+              </button>
+              <button class="btn btn-primary">
+                <i class="fa-regular fa-pen-to-square"></i> Edit Profile
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="../javaScript/profile.js"></script>
+  </body>
+</html>

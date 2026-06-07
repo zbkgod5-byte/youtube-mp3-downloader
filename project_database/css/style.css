@@ -1,0 +1,186 @@
+/* កំណត់ទម្រង់ទូទៅ និង Font ឱ្យស្រដៀងទៅនឹងគំរូ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #369C6C; /* ពណ៌ផ្ទៃខាងក្រោយស្រាលស្អាត */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ប្រអប់កាត Login ធំ */
+.login-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.03); /* ស្រមោលស្រាលៗតាមស្តង់ដារ UI */
+    border: 1px solid #f4cece;
+}
+
+/* ផ្នែក Header ខាងលើ */
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo-icon {
+    background-color: #0e8354; /* ពណ៌បៃតងដូចគំរូរបស់អ្នក */
+    color: #ffffff;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+.login-header h2 {
+    color: #000000;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.login-header p {
+    color: #0f1519;
+    font-size: 13.5px;
+}
+
+/* ផ្នែកទម្រង់ Form និមួយៗ */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #495057;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: #adb5bd;
+    font-size: 15px;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 12px 14px 12px 40px; /* ទុកចន្លោះខាងឆ្វេងសម្រាប់ដាក់ Icon */
+    border: 1px solid #47617a94;
+    border-radius: 6px;
+    background-color: #f8f9fa; /* ពណ៌ប្រផេះស្រាលក្នុងប្រអប់បញ្ចូល */
+    font-size: 14px;
+    color: #212529;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+/* ប្តូរពណ៌ពេលសិស្សចុចចំប្រអប់បញ្ចូល (Focus) */
+.input-wrapper input:focus {
+    border-color: #0e8354;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(14, 131, 84, 0.1);
+}
+
+.toggle-password {
+    position: absolute;
+    right: 14px;
+    color: #6c757d;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/* ផ្នែក Options (Remember me & Forgot password) */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: 13px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #6c757d;
+}
+
+.remember-me input {
+    margin-right: 6px;
+    accent-color: #0e8354; /* ប្តូរពណ៌ Checkbox ទៅជាបៃតង */
+}
+
+.forgot-link {
+    color: #0e8354;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+/* ប៊ូតុង Login */
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background-color: #0e8354;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-login:hover {
+    background-color: #0b6b44;
+}
+
+/* បន្ទាត់ខណ្ឌ និងផ្នែក Footer */
+.divider {
+    height: 1px;
+    background-color: #eaeaea;
+    margin: 24px 0;
+}
+
+.login-footer {
+    text-align: center;
+    font-size: 13.5px;
+    color: #6c757d;
+}
+
+.login-footer a {
+    color: #0e8354;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}

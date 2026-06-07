@@ -150,6 +150,29 @@
 // downloadMusic();
 // } 
 
+
+
+
+const input = document.getElementById('myInput');
+
+// paste event (អ្នកមានរួចហើយ)
+input.addEventListener('paste', (event) => {
+    const pasteData = (event.clipboardData || window.clipboardData).getData('text');
+    processMyUrl(pasteData);
+});
+
+// 👉 button click
+function handleConvert() {
+    const url = input.value;
+
+    if (!url) {
+        alert("❗ សូមបញ្ចូល URL មុន");
+        return;
+    }
+
+    processMyUrl(url);
+}
+
 const inpu = document.getElementById('myInput');
 
 inpu.addEventListener('paste', (event) => {
@@ -162,33 +185,31 @@ inpu.addEventListener('paste', (event) => {
 });
 
 function processMyUrl(youtubeUrl) {
-    console.log("កំពុងផ្ញើទៅកាន់ Server ដើម្បីបំលែង...");
-
-    // ប្រើ fetch ដើម្បីបញ្ជូន URL ទៅកាន់ Node.js Server
     fetch('https://youtube-mp3-downloader-62vh.onrender.com/download', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ url: youtubeUrl })
-})
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ url: youtubeUrl })
+    })
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            console.log("✅ Server បំលែងចប់ហើយ! កំពុងចាប់ផ្ដើមទាញយកមកម៉ាស៊ីន...");
-            
-            // ៣. បង្កើត Link សម្រាប់ទាញយក File ពី Server មកកាន់ Device របស់យើង
-            // យើងប្រើឈ្មោះ File (fileName) ដែល Server បានផ្ញើមកឱ្យ
-         // ៣. បង្កើត Link សម្រាប់ទាញយក File ពី Cloud Server មកកាន់ Device របស់យើង
-const downloadUrl = `https://youtube-mp3-downloader-62vh.onrender.com/get-file?name=${data.fileName}`;
+            const downloadUrl = `https://youtube-mp3-downloader-62vh.onrender.com/get-file?name=${data.fileName}`;
 
-// ប្រើ window.location.href ដើម្បីឱ្យ Browser ចាប់ផ្ដើម Download ស្វ័យប្រវត្តិ
-window.location.href = downloadUrl;
-            alert("✅ ការបំលែងជោគជ័យ! File កំពុងត្រូវបានទាញយកមកកាន់ម៉ាស៊ីនរបស់អ្នក។");
+            // 👉 FIX: create download link
+            const a = document.createElement("a");
+            a.href = downloadUrl;
+            a.download = data.fileName;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+
+            alert("✅ Download started!");
         } else {
-            alert("❌ បរាជ័យ: " + data.error);
+            alert("❌ " + data.error);
         }
     })
     .catch(err => {
-        console.error("Error:", err);
-        alert("❌ មិនអាចទាក់ទងទៅ Server បានទេ! សូមប្រាកដថាអ្នកបានរត់ 'node server.js'");
+        console.error(err);
+        alert("❌ Server error");
     });
 }

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduAdmin System - Faculty Setup</title>
+    <link rel="stylesheet" href="../css/faculty-setup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        
+        <aside class="sidebar">
+            <div class="logo-area">
+                <h2>EduAdmin System</h2>
+            </div>
+            <nav class="menu">
+                <a href="User_Management.html" class="menu-item"><i class="fa-solid fa-users"></i> User Management</a>
+                <a href="student_profiles.html" class="menu-item"><i class="fa-solid fa-graduation-cap"></i> Student Profiles</a>
+                <a href="faculty-setup.html" class="menu-item active"><i class="fa-solid fa-chalkboard-user"></i> Faculty Setup</a>
+                <a href="major_management.html" class="menu-item"><i class="fa-solid fa-network-wired"></i> Major Management</a>
+           <a href="../html/Gpa_Registry.html" class="menu-item "><i class="fa-solid fa-user-check"></i> Gpa Registry</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            
+            <header class="top-nav">
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" placeholder="Search faculties...">
+                </div>
+                <div class="user-profile">
+                    <i class="fa-regular fa-bell"></i>
+                    <i class="fa-solid fa-gear"></i>
+                    <img src="../logo_Icon/OIP.webp" alt="Profile" class="avatar">
+                </div>
+            </header>
+
+            <div class="dashboard-header">
+                <div class="title-text">
+                    <h1>Faculty Setup</h1>
+                    <p>Manage institution departments, leadership, and resources.</p>
+                </div>
+                <button class="btn-export"><i class="fa-solid fa-download"></i> Export Data</button>
+            </div>
+
+            <div class="faculty-grid">
+                
+                <div class="form-container">
+                    <div class="form-title">
+                        <div class="icon-box"><i class="fa-solid fa-building-columns"></i></div>
+                        <h3>Add Faculty</h3>
+                    </div>
+                    <form onsubmit="event.preventDefault();">
+                        <div class="input-group">
+                            <label>Faculty Name</label>
+                            <input type="text" placeholder="e.g. Faculty of Engineering">
+                        </div>
+                        <div class="input-group">
+                            <label>Dean's Name</label>
+                            <input type="text" placeholder="Dr. Jane Smith">
+                        </div>
+                        <div class="input-group">
+                            <label>Building & Room</label>
+                            <input type="text" placeholder="Science Block, Room 402">
+                        </div>
+                        <div class="input-group">
+                            <label>Contact Email</label>
+                            <input type="email" placeholder="engineering@university.edu">
+                        </div>
+                        <div class="input-group">
+                            <label>Description (Optional)</label>
+                            <textarea rows="4" placeholder="Brief summary of faculty focus..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit"><i class="fa-regular fa-floppy-disk"></i> Register Faculty</button>
+                    </form>
+                </div>
+
+                <div class="data-container">
+                    
+                    <div class="stats-row">
+                        <div class="stat-card">
+                            <p class="stat-label">Total Faculties</p>
+                            <div class="stat-value-row">
+                                <span class="stat-number">14</span>
+                                <span class="tag-new">+New</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <p class="stat-label">Active Students</p>
+                            <div class="stat-value-row">
+                                <span class="stat-number">00</span>
+                                <i class="fa-solid fa-user-group icon-gray"></i>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <p class="stat-label">Faculty Buildings</p>
+                            <div class="stat-value-row">
+                                <span class="stat-number">00</span>
+                                <i class="fa-solid fa-location-dot icon-gray"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>FACULTY NAME</th>
+                                    <th>DEAN</th>
+                                    <th>BUILDING</th>
+                                    <th>STUDENTS</th>
+                                    <th>ACTIONS</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="faculty-cell">
+                                            <span class="badge-icon FE">FE</span>
+                                            <strong>Faculty of Engineering</strong>
+                                        </div>
+                                    </td>
+                                    <td>Prof. Robert Miller</td>
+                                    <td>Tesla Center, A1</td>
+                                    <td><span class="student-tag">1,840</span></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="faculty-cell">
+                                            <span class="badge-icon FB">FB</span>
+                                            <strong>Faculty of Business</strong>
+                                        </div>
+                                    </td>
+                                    <td>Dr. Sarah Thompson</td>
+                                    <td>Wall Street Wing, B2</td>
+                                    <td><span class="student-tag">2,105</span></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="faculty-cell">
+                                            <span class="badge-icon FA">FA</span>
+                                            <strong>Faculty of Arts</strong>
+                                        </div>
+                                    </td>
+                                    <td>Dr. Alan Rickman</td>
+                                    <td>Leonardo Hall</td>
+                                    <td><span class="student-tag">945</span></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="faculty-cell">
+                                            <span class="badge-icon FM">FM</span>
+                                            <strong>Faculty of Medicine</strong>
+                                        </div>
+                                    </td>
+                                    <td>Prof. Elena Gilbert</td>
+                                    <td>Health Sciences Bldg</td>
+                                    <td><span class="student-tag">1,420</span></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="faculty-cell">
+                                            <span class="badge-icon FS">FS</span>
+                                            <strong>Faculty of Science</strong>
+                                        </div>
+                                    </td>
+                                    <td>Dr. David Banner</td>
+                                    <td>Curie Laboratory</td>
+                                    <td><span class="student-tag">1,210</span></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- <div class="pagination">
+                            <span>Showing 1 to 5 of 14 faculties</span>
+                            <div class="page-buttons">
+                                <button class="arrow-btn">&lt;</button>
+                                <button class="page-num active">1</button>
+                                <button class="page-num">2</button>
+                                <button class="page-num">3</button>
+                                <button class="arrow-btn">&gt;</button>
+                            </div>
+                        </div> -->
+                    </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </main>
+    </div>
+<script src="../javaScript/faculty-setup.js"></script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduAdmin System - Registration Dashboard</title>
+    <link rel="stylesheet" href="../css/User_Management.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .progress-eng { width: 85%; }
+        .progress-sci { width: 45%; }
+        .progress-bus { width: 65%; }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        
+        <aside class="sidebar">
+            <div class="logo-area">
+               
+                <h2>EduAdmin System</h2>
+            </div>
+                        <div class="admin-central">
+                            <img src="../logo_Icon/234A5783 copy.JPG" alt="EduAdmin logo" class="admin-logo"
+ />
+                <div>
+                    <h3>Admin Central</h3>
+                    <p>Registrar Office</p>
+                </div>
+            </div>
+            <nav class="menu">
+                <a href="User_Management.html" class="menu-item active"><i class="fa-solid fa-users"></i> User Management</a>
+                <a href="student_profiles.html" class="menu-item"><i class="fa-solid fa-user-graduate"></i> Student Profiles</a>
+                <a href="faculty-setup.html" class="menu-item"><i class="fa-solid fa-chalkboard-user"></i> Faculty Setup</a>
+                <a href="major_management.html" class="menu-item"><i class="fa-solid fa-network-wired"></i> Major Management</a>
+            <a href="../html/Gpa_Registry.html" class="menu-item "><i class="fa-solid fa-user-check"></i> Gpa Registry</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            
+            <header class="top-nav">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search users...">
+                </div>
+                <div class="user-profile">
+                    <i class="fa-regular fa-bell"></i>
+                    <i class="fa-solid fa-gear"></i>
+                    <img src="../logo_Icon/OIP.webp" alt="Profile" class="avatar">
+                </div>
+            </header>
+
+            <div class="dashboard-header">
+                <h1>Registration Dashboard</h1>
+                <button class="btn-new"><i class="fa-solid fa-plus"></i> New Registration</button>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="card-icon blue-bg"><i class="fa-solid fa-user-group"></i></div>
+                    <div class="card-info">
+                        <span class="trend">+%</span>
+                        <p class="card-label">Total Students</p>
+                        <h2 class="card-value">2,450</h2>
+
+                        
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="card-icon purple-bg"><i class="fa-regular fa-book"></i></div>
+                    <div class="card-info">
+                        <span class="status-tag global-tag">Active</span>
+                        <p class="card-label">Active Majors</p>
+                        <h2 class="card-value">18</h2>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="card-icon green-bg"><i class="fa-solid fa-building-columns"></i></div>
+                    <div class="card-info">
+                        <span class="status-tag global-tag">Global</span>
+                        <p class="card-label">Total Faculties</p>
+                        <h2 class="card-value">6</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                
+                <div class="table-container">
+                    <div class="table-header">
+                        <h3>Recent Registration Requests</h3>
+                        <div class="table-actions">
+                            <button type="button" class="icon-btn" aria-label="Filter" title="Filter"><i class="fa-solid fa-sliders"></i></button>
+                            <button type="button" class="icon-btn" aria-label="Download" title="Download"><i class="fa-solid fa-download"></i></button>
+                        </div>
+                    </div>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>STUDENT NAME</th>
+                                <th>ID</th>
+                                <th>FACULTY</th>
+                                <th>STATUS</th>
+                                <th>ACTION</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="student-cell">
+                                        <div class="avatar-text js">JS</div>
+                                        <span>Julianne Smith</span>
+                                    </div>
+                                </td>
+                                <td>#2024-0892</td>
+                                <td>Engineering</td>
+                                <td><span class="status active">Active</span></td>
+                                <td><a href="#" class="action-link approve">Approve</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="student-cell">
+                                        <div class="avatar-text mk">MK</div>
+                                        <span>Marcus Kane</span>
+                                    </div>
+                                </td>
+                                <td>#2024-1102</td>
+                                <td>Medicine</td>
+                                <td><span class="status flagged">Flagged</span></td>
+                                <td><a href="#" class="action-link view">View Details</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="student-cell">
+                                        <div class="avatar-text lt">LT</div>
+                                        <span>Lara Thompson</span>
+                                    </div>
+                                </td>
+                                <td>#2024-0755</td>
+                                <td>Business Admin</td>
+                                <td><span class="status pending">Pending</span></td>
+                                <td><a href="#" class="action-link approve">Approve</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="student-cell">
+                                        <div class="avatar-text da">DA</div>
+                                        <span>David Alaba</span>
+                                    </div>
+                                </td>
+                                <td>#2024-1244</td>
+                                <td>Fine Arts</td>
+                                <td><span class="status active">Active</span></td>
+                                <td><a href="#" class="action-link approve">Approve</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="student-cell">
+                                        <div class="avatar-text ew">EW</div>
+                                        <span>Emma Watson</span>
+                                    </div>
+                                </td>
+                                <td>#2024-0021</td>
+                                <td>Law</td>
+                                <td><span class="status active">Active</span></td>
+                                <td><a href="#" class="action-link approve">Approve</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="pagination">
+                        <span>Showing 5 of 42 pending requests</span>
+                        <div class="page-buttons">
+                            <button>&lt;</button>
+                            <button class="active">1</button>
+                            <button>2</button>
+                            <button>3</button>
+                            <button>&gt;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-sidebar">
+                    
+                    <div class="side-card">
+                        <h3>Registration by Faculty</h3>
+                        <div class="progress-group">
+                            <div class="progress-info"><span>Engineering</span> <span>850 Students</span></div>
+                            <div class="progress-bar"><div class="progress progress-eng"></div></div>
+                        </div>
+                        <div class="progress-group">
+                            <div class="progress-info"><span>Science & Arts</span> <span>420 Students</span></div>
+                            <div class="progress-bar"><div class="progress progress-sci"></div></div>
+                        </div>
+                        <div class="progress-group">
+                            <div class="progress-info"><span>Business</span> <span>610 Students</span></div>
+                            <div class="progress-bar"><div class="progress progress-bus"></div></div>
+                        </div>
+                        <a href="#" class="view-report">View Full Report &rarr;</a>
+                    </div>
+
+                    <div class="side-card">
+                        <h3>System Notifications</h3>
+                        <div class="noti-item">
+                            <div class="noti-icon alert-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                            <div class="noti-text">
+                                <h4>Server Maintenance</h4>
+                                <p>Scheduled for 12:00 PM Saturday.</p>
+                            </div>
+                        </div>
+                        <div class="noti-item">
+                            <div class="noti-icon update-icon"><i class="fa-regular fa-envelope"></i></div>
+                            <div class="noti-text">
+                                <h4>Major Update</h4>
+                                <p>Faculty of Law added 4 new modules.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+    </div>
+<script src="../javaScript/User_Management.js"></script>
+<script src="../javaScript/index.js"></script>
+</body>
+</html>

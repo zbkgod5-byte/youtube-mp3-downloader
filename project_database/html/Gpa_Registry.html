@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduAdmin System - GPA Registry</title>
+    <link rel="stylesheet" href="../css/Gpa_Registry.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <aside class="sidebar">
+        <div class="logo-area">
+          <h2>EduAdmin System</h2>
+        </div>
+        <nav class="menu">
+          <a href="../html/User_Management.html" class="menu-item"
+            ><i class="fa-solid fa-users"></i> User Management</a
+          >
+          <a href="../html/student_profiles.html" class="menu-item"
+            ><i class="fa-solid fa-graduation-cap"></i> Student Profiles</a
+          >
+          <a href="../html/faculty-setup.html" class="menu-item"
+            ><i class="fa-solid fa-chalkboard-user"></i> Faculty Setup</a
+          >
+          <a href="../html/major_management.html" class="menu-item"
+            ><i class="fa-solid fa-network-wired"></i> Major Management</a
+          >
+          <a href="../html/Gpa_Registry.html" class="menu-item active"
+            ><i class="fa-solid fa-user-check"></i> Gpa Registry</a
+          >
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <header class="top-nav">
+          <div class="search-bar">
+            <input type="text" placeholder="Search majors..." />
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          </div>
+          <div class="user-profile">
+            <i class="fa-regular fa-bell"></i>
+            <i class="fa-solid fa-gear"></i>
+            <img
+              src="../logo_Icon/OIP.webp"
+              alt="Profile"
+              class="avatar"
+            />
+          </div>
+        </header>
+
+        <div class="dashboard-header">
+          <div class="title-text">
+            <h1>Student Performance & GPA Registry</h1>
+            <p>
+              Manage institutional grade records and student academic standing.
+            </p>
+          </div>
+          <div class="header-actions">
+            <button class="btn-outline">
+              <i class="fa-solid fa-download"></i> Export CSV
+            </button>
+            <button class="btn-primary">
+              <i class="fa-solid fa-print"></i> Print Report
+            </button>
+          </div>
+        </div>
+
+        <div class="content-main-grid">
+          <div class="form-container">
+            <div class="form-title">
+              <i class="fa-regular fa-circle-plus icon-add"></i>
+              <h3>Add Student Record</h3>
+            </div>
+            <form onsubmit="event.preventDefault()">
+              <div class="input-group">
+                <label for="student-id-select">Select Student ID</label>
+                <div class="select-wrapper">
+                  <select id="student-id-select" aria-label="Select Student ID">
+                    <option value="">-- Select Student ID --</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label for="student-name-input">Student Name</label>
+                <input
+                  type="text"
+                  id="student-name-input"
+                  placeholder="Student Name"
+                  readonly
+                />
+              </div>
+
+              <div class="input-group">
+                <label for="faculty-select">Faculty</label>
+                <div class="select-wrapper">
+                  <select id="faculty-select" aria-label="Faculty">
+                    <option value="">-- Faculty --</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label for="gpa-input">Cumulative GPA</label>
+                <input type="text" id="gpa-input" placeholder="0.00 - 4.00" />
+              </div>
+
+              <button type="submit" class="btn-submit">Register Record</button>
+            </form>
+          </div>
+
+          <div class="right-data-layout">
+            <div class="table-box">
+              <div class="table-header">
+                <h3>Student Performance Directory</h3>
+                <div class="table-tools">
+                  <button
+                    type="button"
+                    class="tool-btn"
+                    aria-label="Adjust table filters"
+                  >
+                    <i class="fa-solid fa-sliders" aria-hidden="true"></i>
+                  </button>
+                  <button
+                    type="button"
+                    class="tool-btn"
+                    aria-label="Refresh table"
+                  >
+                    <i class="fa-solid fa-rotate" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>STUDENT ID</th>
+                    <th>STUDENT NAME</th>
+                    <th>FACULTY</th>
+                    <th>GPA</th>
+                    <th>STATUS</th>
+                    <th>ACTIONS</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="student-id">NUBB-2026-001</td>
+                    <td>
+                      <div class="student-cell">
+                        <span class="avatar-text sc-bg">SC</span>
+                        <span>Sok Chanmony</span>
+                      </div>
+                    </td>
+                    <td>Science & Tech</td>
+                    <td class="gpa-value text-green">3.85</td>
+                    <td><span class="status-tag active">Active</span></td>
+                    <td><a href="#" class="details-link">Details &rarr;</a></td>
+                  </tr>
+                  <tr>
+                    <td class="student-id">NUBB-2025-042</td>
+                    <td>
+                      <div class="student-cell">
+                        <span class="avatar-text kl-bg">KL</span>
+                        <span>Keo Leakhena</span>
+                      </div>
+                    </td>
+                    <td>Engineering</td>
+                    <td class="gpa-value">3.42</td>
+                    <td><span class="status-tag active">Active</span></td>
+                    <td><a href="#" class="details-link">Details &rarr;</a></td>
+                  </tr>
+                  <tr>
+                    <td class="student-id">NUBB-2026-118</td>
+                    <td>
+                      <div class="student-cell">
+                        <span class="avatar-text pr-bg">PR</span>
+                        <span>Phon Rattanak</span>
+                      </div>
+                    </td>
+                    <td>Business Admin</td>
+                    <td class="gpa-value">2.95</td>
+                    <td><span class="status-tag pending">Pending</span></td>
+                    <td><a href="#" class="details-link">Details &rarr;</a></td>
+                  </tr>
+                  <tr>
+                    <td class="student-id">NUBB-2024-009</td>
+                    <td>
+                      <div class="student-cell">
+                        <span class="avatar-text mv-bg">MV</span>
+                        <span>Meas Vicheka</span>
+                      </div>
+                    </td>
+                    <td>Science & Tech</td>
+                    <td class="gpa-value text-green">3.98</td>
+                    <td><span class="status-tag active">Active</span></td>
+                    <td><a href="#" class="details-link">Details &rarr;</a></td>
+                  </tr>
+                  <tr>
+                    <td class="student-id">NUBB-2026-088</td>
+                    <td>
+                      <div class="student-cell">
+                        <span class="avatar-text tc-bg">TC</span>
+                        <span>Thy Channary</span>
+                      </div>
+                    </td>
+                    <td>Science & Tech</td>
+                    <td class="gpa-value">3.20</td>
+                    <td><span class="status-tag active">Active</span></td>
+                    <td><a href="#" class="details-link">Details &rarr;</a></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <!-- <div class="pagination">
+                <span>Showing 1-5 of 1,240 records</span>
+                <div class="page-buttons">
+                  <button class="btn-pagi">Previous</button>
+                  <button class="btn-pagi num-btn active">1</button>
+                  <button class="btn-pagi num-btn">2</button>
+                  <button class="btn-pagi num-btn">3</button>
+                  <button class="btn-pagi">Next</button>
+                </div>
+              </div> -->
+            </div>
+
+            <div class="bottom-stats-grid">
+              <div class="b-stat-card light-blue-card">
+                <span class="b-label">INSTITUTION AVG GPA</span>
+                <h2 class="b-value-gpa">4.00</h2>
+                <p class="b-sub-trend">
+                  <i class="fa-solid fa-chart-line"></i> +0.00 from last
+                  semester
+                </p>
+              </div>
+              <div class="b-stat-card dark-green-card">
+                <span class="b-label uppercase text-white-opacity"
+                  >TOP FACULTY</span
+                >
+                <h2 class="b-value-text">Science & Tech</h2>
+                <p class="b-sub-desc">Highest average student score</p>
+              </div>
+              <div class="b-stat-card white-card">
+                <span class="b-label">NEW REGISTRATIONS</span>
+                <h2 class="b-value-big">00</h2>
+                <p class="b-sub-gray">Records added today</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="../javaScript/Gpa_Registry.js"></script>
+  </body>
+</html>

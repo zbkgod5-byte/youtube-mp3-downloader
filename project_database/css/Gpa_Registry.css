@@ -1,0 +1,488 @@
+/* --- Google Font Setup --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- SIDEBAR STYLE --- */
+.sidebar {
+    width: 240px;
+    background-color: #04785746;
+    border-right: 1px solid #e2e8f0;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.logo-area h2 {
+    color: #047857;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    text-decoration: none;
+    color: #475569;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.menu-item:hover {
+    background-color: #f1f5f9;
+}
+
+.menu-item.active {
+    background-color: #047857;
+    color: #ffffff;
+}
+
+/* --- MAIN CONTENT STYLE --- */
+.main-content {
+    flex: 1;
+    padding: 24px;
+    background-color: #f8fafc;
+}
+
+/* Top Navbar */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 8px 38px 8px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 20px;
+    background-color: #f1f5f9;
+    font-size: 13px;
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    right: 14px;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    color: #64748b;
+    font-size: 16px;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Dashboard Header Area */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.title-text h1 {
+    font-size: 24px;
+    color: #0f172a;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.title-text p {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.header-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-outline {
+    background: white;
+    border: 1px solid #cbd5e1;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary {
+    background-color: #047857;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* --- MAIN GRID LAYOUT (2 Columns) --- */
+.content-main-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+/* LEFT COLUMN: FORM */
+.form-container {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.form-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    color: #0f172a;
+}
+
+.icon-add {
+    font-size: 18px;
+    color: #047857;
+}
+
+.form-title h3 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.input-group label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #475569;
+}
+
+.input-group input, .input-group select {
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #334155;
+    outline: none;
+    width: 100%;
+    background-color: #fff;
+}
+
+.input-group input::placeholder {
+    color: #94a3b8;
+}
+
+/* Custom Select Dropdown Arrow */
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 14px;
+    padding-right: 36px;
+}
+
+.btn-submit {
+    background-color: #047857;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    text-align: center;
+}
+
+/* RIGHT COLUMN: DATA LAYOUT (Table + Cards) */
+.right-data-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Table Card styling */
+.table-box {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding-top: 16px;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 16px 20px;
+}
+
+.table-header h3 {
+    font-size: 15px;
+    color: #0f172a;
+    font-weight: 600;
+}
+
+.table-tools {
+    display: flex;
+    gap: 8px;
+}
+
+.tool-btn {
+    border: 1px solid #e2e8f0;
+    background: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    color: #64748b;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #eff6ff;
+    text-align: left;
+    padding: 12px 20px;
+    font-size: 11px;
+    color: #475569;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+td {
+    padding: 14px 20px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 13px;
+    color: #334155;
+}
+
+.student-id {
+    color: #047857;
+    font-weight: 600;
+}
+
+.student-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar-text {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 600;
+    color: white;
+}
+
+/* Dynamic avatar background colors matching image */
+.sc-bg { background-color: #a7f3d0; color: #065f46; }
+.kl-bg { background-color: #e0e7ff; color: #3730a3; }
+.pr-bg { background-color: #f1f5f9; color: #475569; }
+.mv-bg { background-color: #d1fae5; color: #065f46; }
+.tc-bg { background-color: #ccfbf1; color: #115e59; }
+
+.gpa-value {
+    font-weight: 600;
+}
+.text-green {
+    color: #16a34a;
+}
+
+/* Status tags mapping */
+.status-tag {
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+}
+.status-tag.active { background-color: #dcfce7; color: #15803d; }
+.status-tag.pending { background-color: #e0e7ff; color: #4338ca; }
+
+.details-link {
+    text-decoration: none;
+    color: #047857;
+    font-weight: 500;
+}
+
+/* Pagination Row */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    font-size: 12px;
+    color: #64748b;
+}
+
+.page-buttons {
+    display: flex;
+    gap: 4px;
+}
+
+.btn-pagi {
+    border: 1px solid #cbd5e1;
+    background: white;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    color: #475569;
+    cursor: pointer;
+}
+
+.num-btn {
+    width: 28px;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.btn-pagi.active {
+    background-color: #047857;
+    color: white;
+    border-color: #047857;
+}
+
+/* --- BOTTOM SUMMARY CARDS GRID --- */
+.bottom-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.b-stat-card {
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.b-label {
+    font-size: 10px;
+    font-weight: 600;
+    color: #5a6370;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+/* Institution Avg Card (Light Blue) */
+.light-blue-card {
+    background-color: #59637042;
+    border: 1px solid #ffffff;
+}
+.b-value-gpa {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e3a8a;
+}
+.b-sub-trend {
+    font-size: 12px;
+    font-weight: 500;
+    color: #16a34a;
+    margin-top: 4px;
+}
+
+/* Top Faculty Card (Dark Green Forest) */
+.dark-green-card {
+    background-color: #047857;
+    color: white;
+}
+.text-white-opacity {
+    color: rgba(255, 255, 255, 0.7);
+}
+.b-value-text {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 4px;
+}
+.b-sub-desc {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* New Registration Card (White) */
+.white-card {
+    background-color: rgba(162, 182, 212, 0.904);
+    border: 1px solid #ffffff;
+}
+.b-value-big {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0f172a;
+}
+.b-sub-gray {
+    font-size: 11px;
+    color: #64748b;
+}

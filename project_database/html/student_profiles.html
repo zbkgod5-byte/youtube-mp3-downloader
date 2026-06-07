@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduAdmin System - Student Profiles</title>
+    <link rel="stylesheet" href="../css/student_profiles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <aside class="sidebar">
+        <div class="admin-central-header">
+          <div class="logo-box">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div class="logo-text">
+            <h2>Admin Central</h2>
+            <p>Registrar Office</p>
+          </div>
+        </div>
+        <nav class="menu">
+          <a href="User_Management.html" class="menu-item"
+            ><i class="fa-solid fa-users"></i> User Management</a
+          >
+          <a href="student_profiles.html" class="menu-item active"
+            ><i class="fa-solid fa-graduation-cap"></i> Student Profiles</a
+          >
+          <a href="faculty-setup.html" class="menu-item"
+            ><i class="fa-solid fa-chalkboard-user"></i> Faculty Setup</a
+          >
+          <a href="major_management.html" class="menu-item"
+            ><i class="fa-solid fa-network-wired"></i> Major Management</a
+          >
+          <a href="../html/Gpa_Registry.html" class="menu-item "><i class="fa-solid fa-user-check"></i> Gpa Registry</a>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <header class="top-nav">
+          <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" placeholder="Search students..." />
+          </div>
+          <div class="user-profile">
+            <i class="fa-regular fa-bell"></i>
+            <i class="fa-solid fa-gear"></i>
+            <img
+              src="../logo_Icon/OIP.webp"
+              alt="Profile"
+              class="avatar"
+            />
+          </div>
+        </header>
+
+        <form class="registration-form" onsubmit="event.preventDefault()">
+          <div class="form-section full-width">
+            <h3 class="section-title">
+              <i class="fa-solid fa-address-card icon-green"></i> Student
+              Identity
+            </h3>
+            <div class="form-grid-2">
+              <div class="input-group">
+                <label>Student Full Name</label>
+                <input type="text" placeholder="e.g. Johnnathan Doe" />
+              </div>
+              <div class="input-group">
+                <label>Student ID (Auto-generated)</label>
+                <div class="input-with-icon">
+                  <input
+                    type="text"
+                    value="STU-2024-001"
+                    readonly
+                    class="disabled-input"
+                    title="Student ID"
+                    aria-label="Student ID"
+                  />
+                  <i class="fa-solid fa-lock lock-icon"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-grid-2 full-width">
+            <div class="form-section">
+              <h3 class="section-title">
+                <i class="fa-regular fa-address-book icon-green"></i> Contact
+                Information
+              </h3>
+              <div class="input-group">
+                <label>Phone Number</label>
+                <input type="text" placeholder="+1 (555) 000-0000" />
+              </div>
+              <div class="input-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="student@university.edu" />
+              </div>
+            </div>
+
+            <div class="form-section">
+              <h3 class="section-title">
+                <i class="fa-regular fa-calendar-days icon-green"></i> Personal
+                Details
+              </h3>
+              <div class="input-group">
+                <label>Date of Birth</label>
+                <input type="text" placeholder="mm/dd/yyyy" />
+              </div>
+              <div class="info-alert-box">
+                <i class="fa-solid fa-circle-info info-icon"></i>
+                <p>Verify identity documents before completing registration.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section full-width">
+            <h3 class="section-title">
+              <i class="fa-solid fa-building-columns icon-green"></i> Academic
+              Selection
+            </h3>
+            <div class="form-grid-3">
+              <div class="input-group">
+                <label>Faculty</label>
+                <select title="Faculty">
+                  <option>Select Faculty</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <label>Major</label>
+                <select title="Major">
+                  <option>Select Major</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <label>Academic Year</label>
+                <select title="Academic Year">
+                  <option>2024/25</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-actions full-width">
+            <button type="button" class="btn-cancel">Cancel</button>
+            <button type="submit" class="btn-save">
+              <i class="fa-regular fa-floppy-disk"></i> Save Registration
+            </button>
+          </div>
+        </form>
+
+        <div class="table-container">
+          <div class="table-header">
+            <h3>Active Student Records</h3>
+            <div class="table-buttons">
+              <button class="btn-outline">
+                <i class="fa-solid fa-sliders"></i> Filter
+              </button>
+              <button class="btn-outline">
+                <i class="fa-solid fa-download"></i> Export
+              </button>
+            </div>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Student ID</th>
+                <th>Name</th>
+                <th>Faculty</th>
+                <th>Major</th>
+                <th>Year</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="student-id-cell">STU-2024-089</td>
+                <td>
+                  <div class="name-cell">
+                    <span class="avatar-circle jd-avatar">JD</span>
+                    <span>Jane Doe</span>
+                  </div>
+                </td>
+                <td>Engineering</td>
+                <td>Robotics</td>
+                <td><span class="badge badge-senior">Senior</span></td>
+                <td class="actions-cell">
+                  <button type="button" class="action-btn" aria-label="Edit student" title="Edit student">
+                    <i class="fa-solid fa-pencil"></i>
+                  </button>
+                  <button type="button" class="action-btn" aria-label="Delete student" title="Delete student">
+                    <i class="fa-regular fa-trash-can"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td class="student-id-cell">STU-2024-092</td>
+                <td>
+                  <div class="name-cell">
+                    <span class="avatar-circle mc-avatar">MC</span>
+                    <span>Marcus Chen</span>
+                  </div>
+                </td>
+                <td>Business Admin</td>
+                <td>International Finance</td>
+                <td><span class="badge badge-sophomore">Sophomore</span></td>
+                <td class="actions-cell">
+                  <button type="button" class="action-btn" aria-label="Edit student" title="Edit student">
+                    <i class="fa-solid fa-pencil"></i>
+                  </button>
+                  <button type="button" class="action-btn" aria-label="Delete student" title="Delete student">
+                    <i class="fa-regular fa-trash-can"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+    <script src="../javaScript/javaScript.js"></script>
+  </body>
+</html>

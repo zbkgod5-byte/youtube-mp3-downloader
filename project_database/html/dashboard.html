@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University SRS - Student Dashboard</title>
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <h2>University SRS</h2>
+          <p>Academic Year 2026</p>
+        </div>
+
+        <nav class="sidebar-menu">
+          <ul>
+            <li class="active">
+              <a href="dashboard.html"
+                ><i class="fa-solid fa-table-columns"></i> Overview</a
+              >
+            </li>
+            <li>
+              <a href="profile.html"
+                ><i class="fa-regular fa-user"></i> Profile</a
+              >
+            </li>
+            <li>
+              <a href="faculty-major.html"
+                ><i class="fa-solid fa-graduation-cap"></i> Faculty & Major</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+          
+          <p>© 2026  SRS.  All Rights Reserved. </p>
+    <p > System Version: v1.2.0</p>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="top-navbar">
+          <div class="user-profile-header">
+            <div class="user-info text-right">
+              <span class="user-name">Alex Rivera</span>
+              <span class="student-id">STUDENT ID: 20248812</span>
+            </div>
+            <img
+              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80"
+              alt="Student Profile"
+              class="avatar"
+            />
+          </div>
+        </header>
+
+        <div class="content-body">
+          <div class="welcome-banner">
+            <div class="banner-text">
+              <h1>Welcome back, Alex!</h1>
+              <p>Your Academic Journey Starts Here.</p>
+            </div>
+            <div class="banner-stats">
+              <div class="stat-box">
+                <span class="stat-label">Year</span>
+                <span class="stat-value" id="year">12.0</span>
+              </div>
+           <div class="stat-box">
+    <span class="stat-label">GPA</span>
+    <span class="stat-value" id="dashboard-stat-gpa">3.82</span>
+</div>
+            </div>
+          </div>
+
+          <div class="info-action-row">
+            <div class="info-cards">
+              <div class="info-card">
+                <div class="card-icon">
+                  <i class="fa-solid fa-building-columns"></i>
+                </div>
+                <div class="card-details">
+                  <span class="label">Assigned Faculty</span>
+                  <span class="value">Faculty of Engineering</span>
+                </div>
+              </div>
+              <div class="info-card">
+                <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+                <div class="card-details">
+                  <span class="label">Current Major</span>
+                  <span class="value">Software Engineering</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="action-buttons">
+              <button class="btn btn-primary">
+                <i class="fa-solid fa-circle-plus"></i> New Enrollment
+              </button>
+              <button class="btn btn-secondary">View Schedule</button>
+              <button class="btn btn-secondary">Academic Calendar</button>
+            </div>
+          </div>
+
+          <div class="table-container">
+            <div class="table-header">
+              <h3>Registered Courses — Fall Semester 2026</h3>
+              <span class="last-updated"  id="last-updated">Last updated: Aug 24, 2024</span>
+            </div>
+
+            <table class="courses-table">
+              <thead>
+                <tr>
+                  <th>STUDENT ID</th>
+                  <th>NAME</th>
+
+                  <th>ACTION</th>
+                  <th>FACULTY</th>
+                  <th>GPA</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>20248812</td>
+                  <td>Advanced Data Structures</td>
+
+                  <td>4.0</td>
+
+                  <td><a href="#" class="action-link">Details</a></td>
+                </tr>
+                <tr>
+                  <td>Software Engineering Principles</td>
+                  <td>3.0</td>
+
+                  <td><a href="#" class="action-link">Details</a></td>
+                </tr>
+                <tr>
+                  <td>Discrete Mathematics</td>
+                  <td>3.0</td>
+
+                  <td><a href="#" class="action-link">Details</a></td>
+                </tr>
+                <tr>
+                  <td>Modern History Elective</td>
+                  <td>2.0</td>
+
+                  <td><a href="#" class="action-link">Details</a></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="table-footer">
+              
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="../javaScript/dashboard.js"></script>
+  </body>
+</html>

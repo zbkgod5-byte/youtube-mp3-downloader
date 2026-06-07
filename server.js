@@ -47,12 +47,13 @@ app.get('/get-file', (req, res) => {
     const filePath = path.resolve(__dirname, 'downloads', fileName);
 
     if (fs.existsSync(filePath)) {
-        // ប្រើ res.download ដើម្បីឱ្យ Browser ចាប់ផ្ដើម Download មកក្នុងទូរស័ព្ទ/កុំព្យូទ័រ
-        res.download(filePath, fileName, (err) => {
-            if (err) console.log("បញ្ហាក្នុងការផ្ញើ File:", err);
-        });
+        res.setHeader('Content-Disposition', `attachment; filename="${fileName}"`);
+        res.setHeader('Content-Type', 'audio/mpeg');
+
+        const stream = fs.createReadStream(filePath);
+        stream.pipe(res);
     } else {
-        res.status(404).send("រកមិនឃើញ File ទេ!");
+        res.status(404).send("File not found");
     }
 });
 
